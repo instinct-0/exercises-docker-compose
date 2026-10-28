@@ -1,10 +1,10 @@
 services:
     frontend:
-        image: frontend
+        image: mluukkai/example-frontend
         ports:
             - 5001:5001
 
     backend:
-        image: backend
+        image: mluukkai/example-backend
         ports:
             - 8080:8080

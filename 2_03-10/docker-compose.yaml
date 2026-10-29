@@ -22,5 +22,6 @@ services:
         image: postgres:18
         environment:
             POSTGRES_PASSWORD:  "trust"
-           
-        
+            
+        volumes:
+            - ./database:/var/lib/postgresql

@@ -10,7 +10,7 @@ services:
             GIN_MODE:           "release"
             REDIS_HOST:         "redis"
             POSTGRES_HOST:      "database"
-            POSTGRES_PASSWORD:  trust
+            POSTGRES_PASSWORD:  "trust"
 
         ports:
             - 8080:8080
@@ -20,5 +20,7 @@ services:
 
     database:
         image: postgres:18
+        environment:
+            POSTGRES_PASSWORD:  "trust"
            
         

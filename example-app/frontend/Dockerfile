@@ -1,11 +1,11 @@
 FROM ubuntu:24.04
 
 WORKDIR /app/frontend
-COPY 1_12 .
+COPY . .
 
 EXPOSE 5001
 ENV GIN_MODE=release
-ENV REACT_APP_BACKEND_URL=http://localhost:8080/
+ENV REACT_APP_BACKEND_URL=http://localhost:8000/api
 
 RUN apt update && apt install -y curl
 

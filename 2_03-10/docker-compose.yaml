@@ -7,10 +7,18 @@ services:
     backend:
         image: pdrbrbs/backend
         environment:
-            GIN_MODE: "release"
-            REDIS_HOST: "redis"
+            GIN_MODE:           "release"
+            REDIS_HOST:         "redis"
+            POSTGRES_HOST:      "database"
+            POSTGRES_PASSWORD:  trust
+
         ports:
             - 8080:8080
-            
+
     redis:
         image: redis:8
+
+    database:
+        image: postgres:18
+           
+        

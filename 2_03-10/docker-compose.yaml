@@ -1,11 +1,6 @@
 services:
     frontend:
         image: pdrbrbs/frontend
-        environment:
-            REACT_APP_BACKEND_URL:  "http://localhost:8000"
-            
-        ports:
-            - 5001:5001
 
     backend:
         image: pdrbrbs/backend
@@ -16,13 +11,10 @@ services:
             POSTGRES_PASSWORD:  "trust"
             REQUEST_ORIGIN:     "http://localhost:8000"
 
-        ports:
-            - 8080:8080
-
     redis:
         image: redis:8
 
-    database:
+    db:
         image: postgres:18
         environment:
             POSTGRES_HOST:      "database"
